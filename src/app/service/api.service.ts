@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { ICurrency } from '../interfaces';
+import { ICoinData } from '../interfaces/coinData';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,6 @@ export class ApiService {
   }
 
   getCurrencyById(coinId: string) {
-    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}`);
+    return this.http.get<ICoinData>(`https://api.coingecko.com/api/v3/coins/${coinId}`);
   }
 }

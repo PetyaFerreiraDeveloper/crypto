@@ -1,3 +1,5 @@
+import { IImage } from "./image";
+
 export interface ICurrency {
   ath: number;
   ath_change_percentage: number;
@@ -10,7 +12,7 @@ export interface ICurrency {
   fully_diluted_valuation: number;
   high_24h: number;
   id: string;
-  image: string;
+  image: IImage;
   last_updated: string;
   low_24h: number;
   market_cap: number;
